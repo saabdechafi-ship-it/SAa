@@ -3,77 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
-    rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Salim Portfolio</title>
+    <link rel="stylesheet" href="sssstyle.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body>
-    <header class="header">
-        <a href="#" class="logo">Salim.</a>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <section class="home">
-        <div class="home-content">
-            <h1> Hi, I'm Salim Abdechafi</h1>
-            <h2>Developer full stack</h2>
-            <p>Je suis Salim Abdechafi, 
-                étudiant en développement web 
-                full stack. Passionné par la création 
-                d’expériences numériques modernes, 
-                je maîtrise HTML, CSS, JavaScript ainsi
-                 que les bases du backend. Mon objectif 
-                 est de devenir un développeur complet 
-                 et professionnel.
-            </p>
-                 <div class="btn-box">
-                    <a href="#">Hire Me</a>
-                    <a href="#">Let's Talk</a>
-                 </div>
-                
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Salim</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Blogs</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
-    </section>
-    <div class="container">
-    <section id="About" class="section">
-      <h3>About Me</h3>
-      <p>Short bio about your skills, experience, and background.</p>
-    </section>
-
-    <section id="projects" class="section">
-      <h3>My Projects</h3>
-      <div class="projects">
-        <div class="project-card">
-          <h4>Project One</h4>
-          <p>Description of the project.</p>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Skills</a>
+                <a href="">Services</a>
+                <a href="">Blogs</a>
+                <a href="">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
         </div>
-        <div class="project-card">
-          <h4>Project Two</h4>
-          <p>Description of the project.</p>
-        </div>
-        <div class="project-card">
-          <h4>Project Three</h4>
-          <p>Description of the project.</p>
-        </div>
-      </div>
-    </section>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="main.png" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Salim</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Je suis Salim Abdechafi, 
+                étudiant en développement web full stack. Passionné par la création d’expériences numériques modernes, je maîtrise 
+                HTML, CSS, JavaScript ainsique les bases du backend. Mon objectif est de devenir un développeur complet et professionnel.</p>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="#" ><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                        <button>Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
 
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Email: example@mail.com</p>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
-  </footer>
-  
+        
 </body>
 </html>
